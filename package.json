@@ -1,11 +1,8 @@
 {
-  "name": "html-to-draftjs",
-  "version": "1.4.0",
+  "name": "@mailupinc/html-to-draftjs",
+  "version": "1.4.2",
   "main": "dist/html-to-draftjs.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jpuri/html-to-draftjs.git"
-  },
+  "repository": "https://github.com/BEE-Plugin/html-to-draftjs.git",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -24,8 +21,8 @@
     "webpack": "^3.9.1"
   },
   "peerDependencies": {
-    "immutable": "3.x.x || 4.x.x",
-    "draft-js": "^0.10.x"
+    "draft-js": "^0.10.x",
+    "immutable": "3.x.x || 4.x.x"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,6 +31,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --config config/webpack.config.js"
   },
-  "author": "Jyoti Puri",
-  "license": "MIT"
+  "author": "BEE",
+  "license": "MIT",
+  "description": "Library to convert from HTML to DraftJS state"
 }

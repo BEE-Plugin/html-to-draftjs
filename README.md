@@ -1,19 +1,21 @@
 # HTML To DraftJS
 
 A library for converting plain HTML to DraftJS Editor content.
-Build for use with **[react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg)**.
+Meant to be used with **[react-draft-wysiwyg](https://github.com/jpuri/react-draft-wysiwyg)**.
+
+This is a fork from the original html-to-draftjs from **Jyoti Puri**, available [here](https://github.com/jpuri/html-to-draftjs.git)
 
 ## Installation
 
 ```
-npm install html-to-draftjs --save
+npm install @mailupinc/html-to-draftjs --save
 ```
 
 ## Usage
 
 ```
 import { EditorState, ContentState } from 'draft-js';
-import htmlToDraft from 'html-to-draftjs';
+import htmlToDraft from '@mailupinc/html-to-draftjs';
 
 const blocksFromHtml = htmlToDraft(this.props.content);
 const { contentBlocks, entityMap } = blocksFromHtml;
@@ -43,6 +45,3 @@ htmlToDraft('<hr/>', (nodeName, node) => {
   }
 })
 ```
-
-
-**Take Care:** Plz not use version `1.2.0` it has build issues.
