@@ -1,6 +1,6 @@
 {
   "name": "@mailupinc/html-to-draftjs",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "main": "dist/html-to-draftjs.js",
   "repository": "https://github.com/BEE-Plugin/html-to-draftjs.git",
   "devDependencies": {

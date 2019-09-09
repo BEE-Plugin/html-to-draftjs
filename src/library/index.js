@@ -46,6 +46,22 @@ function genFragment(
     }
   }
 
+  if (nodeName === 'a') {
+    const underline = node && node.getAttribute('style') && !node.getAttribute('style').match(
+      /text-decoration:\s{0,}none/
+    );
+    const entityId = Entity.__create(
+      'LINK',
+      'MUTABLE',
+      {
+        targetOption: node && node.getAttribute('target'),
+        url: node && node.getAttribute('href'),
+        underline,
+      },
+    );
+    return createTextChunk(node, inlineStyle, entityId);
+  }
+ 
   if (nodeName === '#text' && node.textContent !== '\n') {
     return createTextChunk(node, inlineStyle, inEntity);
   }
